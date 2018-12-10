@@ -10,7 +10,7 @@ using SGE.Infraestructure.Data;
 namespace SGE.Infraestructure.Migrations
 {
     [DbContext(typeof(SGEContext))]
-    [Migration("20181209234043_Inicio")]
+    [Migration("20181210224337_Inicio")]
     partial class Inicio
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -125,9 +125,11 @@ namespace SGE.Infraestructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Email");
+                    b.Property<string>("Email")
+                        .HasColumnType("varchar(30)");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("Nome")
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("ParticipanteId");
 

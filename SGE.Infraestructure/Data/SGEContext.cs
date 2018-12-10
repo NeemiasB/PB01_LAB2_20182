@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SGE.ApplicationCore;
 using SGE.ApplicationCore.Entity;
+using SGE.Infrastructure.EntityConfig;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -31,40 +32,57 @@ namespace SGE.Infraestructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
-            // Configurando a entidade Endereco com Fluent API
+            modelBuilder.ApplyConfiguration(new EnderecoConfig());
+
+            modelBuilder.ApplyConfiguration(new EventoConfig());
+
+            modelBuilder.ApplyConfiguration(new GrupoTematicoConfig());
+
+            modelBuilder.ApplyConfiguration(new ParticipanteConfig());
+
+
+          /*  //Propagação de dados de Endereco
             modelBuilder.Entity<Endereco>()
-               .Property(x => x.Logradouro)
-               .HasColumnType("varchar(100)");
+                .HasData(
 
-            modelBuilder.Entity<Endereco>()
-                .Property(x => x.Bairro)
-                .HasColumnType("varchar(100)");
+                new Endereco { EnderecoId = 1, Logradouro= "Cuiaba", Bairro="Dr. Fabio", CEP="00000-000", Numero= "1000"}
 
-            modelBuilder.Entity<Endereco>()
-                .Property(x => x.CEP)
-                .HasColumnType("varchar(9)");
+                );
 
-            modelBuilder.Entity<Endereco>()
-                .Property(x => x.Numero)
-                .HasColumnType("varchar(4)");
-
-
-
-            // Configurando a entidade Evento com Fluent API
+            //Propagação de dados de Evento
             modelBuilder.Entity<Evento>()
-               .Property(x => x.Descricao)
-               .HasColumnType("varchar(100)");
+                .HasData(
 
-           
+                new Evento { EventoId = 1, Descricao="Cleyton Rasta, cabeça de gelo"  }
 
-            // Configurando a entidade GrupoTematico com Fluent API
+                );
+
+            //Propagação de dados GrupoTematico
             modelBuilder.Entity<GrupoTematico>()
-               .Property(x => x.Descricao)
-               .HasColumnType("varchar(100)");
+                .HasData(
 
-            
+                new GrupoTematico { GrupoTematicoId= 1, Descricao="Grupo Maluco" }
 
-         
+                );
+
+            //Propagação de dados Inscricao
+            modelBuilder.Entity<Inscricao>()
+                .HasData(
+
+                new Inscricao { InscricaoId=1, DataCadastro= System.DateTime.Today, Valor= 100 }
+
+                );
+
+            modelBuilder.Entity<InscricaoGrupoTematico>()
+                .HasData(
+
+                new InscricaoGrupoTematico { InscricaoGrupoTematicoId= 1, GrupoTematicoId= 1, InscricaoId= 1}
+
+                );
+
+
+    */
+
 
 
         }

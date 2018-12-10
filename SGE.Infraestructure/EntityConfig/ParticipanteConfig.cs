@@ -5,7 +5,7 @@ using SGE.ApplicationCore.Entity;
 
 namespace SGE.Infrastructure.EntityConfig
 {
-    public class MarcaConfig : IEntityTypeConfiguration<Participante>
+    public class ParticipanteConfig : IEntityTypeConfiguration<Participante>
     {
         public void Configure(EntityTypeBuilder<Participante> builder)
         {

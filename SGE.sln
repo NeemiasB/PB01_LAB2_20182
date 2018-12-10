@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infraestructure", "Infraest
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FC6D8C85-06FB-4437-9971-3E27710E2F31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGE.ApplicationCore", "SGE.ApplicationCore\SGE.ApplicationCore.csproj", "{F2FBF8DC-E0E6-411F-9141-25DE00F1CF69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGE.ApplicationCore", "SGE.ApplicationCore\SGE.ApplicationCore.csproj", "{F2FBF8DC-E0E6-411F-9141-25DE00F1CF69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SGE.Infraestructure", "SGE.Infraestructure\SGE.Infraestructure.csproj", "{9A5C15C0-62C9-480E-AA21-9D3809F3065D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SGE.Infraestructure", "SGE.Infraestructure\SGE.Infraestructure.csproj", "{9A5C15C0-62C9-480E-AA21-9D3809F3065D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

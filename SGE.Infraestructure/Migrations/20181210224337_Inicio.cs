@@ -27,8 +27,8 @@ namespace SGE.Infraestructure.Migrations
                 {
                     ParticipanteId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(nullable: true),
-                    Email = table.Column<string>(nullable: true)
+                    Nome = table.Column<string>(type: "varchar(30)", nullable: true),
+                    Email = table.Column<string>(type: "varchar(30)", nullable: true)
                 },
                 constraints: table =>
                 {
